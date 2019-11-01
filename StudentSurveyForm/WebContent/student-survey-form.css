@@ -1,0 +1,70 @@
+/* Name- Sneha Wattamwar
+G#- G01209653
+This files contains css for index.html and index.jsp
+*/
+
+.student-survey-heading{
+	border:5px solid blue;
+	text-align:center;
+	color: blue;
+	margin-right: 10px;
+	margin-left: 10px;
+	font-family: "Times New Roman";
+}
+
+.display-heading {
+	background-color: #0A989D;
+}
+
+.form-headers {
+	color: white;
+	font-family: Arial, Helvetica, sans-serif;
+ 	float:left;
+}
+
+.form-questions {
+	margin: 10px 10px 0px 0px;
+}
+
+.form-options {
+	color: white;
+	font-family: Arial, Helvetica, sans-serif;	
+}
+
+input[type=text],[type=email],[type=date],[type=number]{
+  padding: 10px 10px 10px 5px;
+  margin: 5px 20px 10px 240px;
+  display: block;
+  width: 50%;
+  border-radius:10px;
+  color: #0A989D;
+}
+
+input[type=checkbox] [type=radio] {
+	color: white;
+}
+
+.form-border {
+	border:5px solid blue;
+	padding:2px 5px 5px 5px;
+}
+
+.form-inputs {
+	margin: 20px 5px 10px 50px;
+}
+
+button {
+  background-color: white;
+  padding: 15px 30px;
+  border-radius: 10px;
+  font-size: 16px;
+  margin-left: 220px;
+}
+
+.required {
+  color: red;
+}
+
+.raffle-input {
+	display: block;
+}
