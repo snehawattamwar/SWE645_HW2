@@ -1,0 +1,137 @@
+<!-- Name- Sneha Wattamwar
+G#- G01209653
+The HTML contains form fields
+Name, Last Name, Street Address, City, State, Zipcode, Tel No, Email, Date are required fields
+Zipcode field has to be a number and required field
+Tel No field has to be digit with following pattern - (\d+){10}
+Email type is email
+Date type is date
+
+SUBMIT button submits form
+CANCEL button resets form
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="student-survey-form.css">
+<title>Student Survey Form</title>
+</head>
+<body class="display-heading">
+<h1 class="student-survey-heading">STUDENT SURVEY FORM</h1>
+<form class="form-border" method="POST" action="StudentSurveyFormServlet">
+  <div>
+    <label class="form-headers">First Name<span class="required">*</span></label>
+    <input type="text" name="firstName" required>
+  </div>
+  
+  <div>
+    <label class="form-headers">Last Name<span class="required">*</span></label>
+    <input type="text" name="lastName" required>
+  </div>
+  
+  <div>
+    <label class="form-headers">Street Address<span class="required">*</span></label>
+    <input type="text" name="streetAddress" required>  
+  </div>
+   
+   <div>
+    <label class="form-headers">City<span class="required">*</span></label>
+    <input type="text" name="city" required>
+   </div>
+    
+   <div>
+    <label class="form-headers">State<span class="required">*</span></label>
+    <input type="text" name="state" required> 
+   </div>
+   
+   <div>
+    <label class="form-headers">Zip Code<span class="required">*</span></label>
+    <input type="number" name="zipCode" required>
+  </div>
+  
+  <div>
+    <label class="form-headers">Telephone Number<span class="required">*</span></label>
+    <input type="text" name="telephoneNumber" pattern="(\d+){10}" required>
+  </div>
+  
+  <div>
+    <label class="form-headers">Email<span class="required">*</span></label>
+    <input type="email" name="email" required>
+  </div>
+  
+  <div>
+    <label class="form-headers">Date Of Survey<span class="required">*</span></label>
+    <input type="date" name="dateOfSurvey" required>
+  </div>
+  
+  <div>
+    <label class="form-headers form-questions">What did you like about the campus?</label>
+  </div>
+  
+  <div class="form-inputs">
+    <input type="checkbox" name="campusLikely" value="students">
+    <label class="form-options">Students</label>
+    <input type="checkbox" name="campusLikely" value="location">
+    <label class="form-options">Location</label>
+    <input type="checkbox" name="campusLikely" value="campus">
+    <label class="form-options">Campus</label>
+    <input type="checkbox" name="campusLikely" value="atmosphere">
+    <label class="form-options">Atmosphere</label>
+    <input type="checkbox" name="campusLikely" value="dormRooms">
+    <label class="form-options">Dorm Rooms</label>
+    <input type="checkbox" name="campusLikely" value="sports">
+    <label class="form-options">Sports</label>
+  </div>
+  
+  <div>
+    <label class="form-headers form-questions">Where did you hear about the university?</label>
+  </div>
+  
+  <div class="form-inputs">
+    <input type="radio" name="campusInterest" value="friends">
+    <label class="form-options">Friends</label>
+    <input type="radio" name="campusInterest" value="television">
+    <label class="form-options">Television</label>
+    <input type="radio" name="campusInterest" value="internet">
+    <label class="form-options">Internet</label>
+    <input type="radio" name="campusInterest" value="other">
+    <label class="form-options">Other</label>
+  </div>
+  
+  <div>
+    <label class="form-headers form-questions">How likely are you to recommend this university?</label>
+  </div>
+  
+  <div class="form-inputs">
+    <select id = "recommendingList" name="recommendingList">
+        <option value = "Very Likely">Very Likely</option>
+        <option value = "Likely">Likely</option>
+        <option value = "Unlikely">Unlikely</option>
+    </select>
+  </div>
+  
+  <div>
+    <label class="form-options">Enter 10 numbers separated by comma in raffle. Winning student gets FREE MOVIE TICKETS!!!!</label>
+  </div>
+  <div>
+    <label class="form-headers form-questions">RAFFLE</label>
+     <input type="text" name="raffle" class="raffle-input" pattern="((\d+,){9}\d+)">
+  </div>
+  
+  <div>
+    <label class="form-headers form-questions">Please enter your comments</label>
+  </div>
+    
+  <div>
+    <textarea rows = "6" cols = "120" name = "comments"></textarea>
+  </div>
+  
+  <div>
+    <button type = "submit" value="Submit">SUBMIT</button>
+    <button type="reset">CANCEL</button>
+  </div> 
+</form>
+</body>
+</html>
