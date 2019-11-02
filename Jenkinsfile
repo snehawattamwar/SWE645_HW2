@@ -7,6 +7,7 @@ node {
     }
 
     stage('Build image') {
+        sh 'sudo yum install docker-engine -y'
         app = docker.build("swattamw/studentsurveyform")
     }
 
