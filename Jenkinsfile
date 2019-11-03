@@ -20,7 +20,7 @@ node {
     
     stage('Pods') {
         withKubeConfig([credentialsId: 'kube-cred', serverUrl: 'http://a0e80e050fdcf11e9a4fa024f1795ae0-294861629.us-east-2.elb.amazonaws.com:4000/StudentSurveyForm/']) {
-            sh 'kubectl apply --filename surveyform.yaml'
+            sh 'kubectl get pods'
         }
     }
 }
