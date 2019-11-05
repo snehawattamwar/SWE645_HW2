@@ -3,7 +3,7 @@ node {
 
     stage('Clone repository') {
         checkout scm
-	    sh 'jar -cvf StudentSurveyForm.war index.html index.jsp student-survey-form.css'
+	sh 'jar -cvf StudentSurveyForm.war index.html index.jsp student-survey-form.css'
     }
 
     stage('Build image') {
