@@ -7,7 +7,7 @@ pipeline {
         stage('Clone repository') {
             steps {
               sh 'java -version'
-              sh 'jar -cvf StudentSurveyForm.war index.html index.jsp student-survey-form.css' 
+              sh '/usr/bin/jar -cvf StudentSurveyForm.war index.html index.jsp student-survey-form.css' 
             }
         }
 
