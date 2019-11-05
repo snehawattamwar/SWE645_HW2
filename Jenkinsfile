@@ -1,4 +1,4 @@
-node {
+node('any') {
     def app
 
     stage('Clone repository') {
