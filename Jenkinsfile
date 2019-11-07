@@ -33,7 +33,7 @@ pipeline {
         stage('Pods') {
             steps {
                 script {
-                    'sh kubectl set image deployments/surveyapp surveyapp=swattamw/studentsurveyform:latest'
+                    sh 'kubectl set image deployments/surveyapp surveyapp=swattamw/studentsurveyform:latest'
                 }
             }
         }
