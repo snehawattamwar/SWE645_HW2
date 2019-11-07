@@ -34,7 +34,7 @@ pipeline {
             steps {
                 script {
                   withKubeConfig([credentialsId: 'kube-cred', serverUrl: ‘http://afd74701301a111eaadd70643358b614-1438923002.us-east-2.elb.amazonaws.com:4000/StudentSurveyForm]) {
-                  sh 'kubectl set image deployments/surveyapp surveyapp=swattamw/studentsurveyform:latest'
+                  sh 'kubectl get pods'
                   }
                 }
             }
