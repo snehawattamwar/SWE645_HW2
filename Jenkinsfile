@@ -32,9 +32,7 @@ pipeline {
         
         stage('Pods') {
             steps {
-                script {
-                    sh 'kubectl get pods'
-                }
+              sh 'kubectl get pods'
             }
         }
     }
