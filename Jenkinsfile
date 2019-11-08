@@ -32,12 +32,9 @@ pipeline {
         
         stage('Pods') {
             steps {
-                script {
-                withKubeConfig([credentialsId: 'kube-cred', serverUrl: 'https://BCF949B28BDCE2D73533306C496AB5BA.yl4.us-east-2.eks.amazonaws.com']) {
-                  sh 'kubectl set image deployments/surveyapp surveyapp=swattamw/studentsurveyform:latest'
-                  } 
-                }
-             }
-         }
+                sh 'kubectl set image deployments/surveyapp surveyapp=swattamw/studentsurveyform:latest'
+                } 
+            }
+        }
     }
 }
