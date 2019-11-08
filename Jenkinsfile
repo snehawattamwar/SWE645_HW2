@@ -32,7 +32,8 @@ pipeline {
         
         stage('Pods') {
             steps {
-                withKubeConfig([credentialsId: 'kube-cred', serverUrl: 'http://afd74701301a111eaadd70643358b614-1438923002.us-east-2.elb.amazonaws.com']) {
+                withKubeConfig([credentialsId: 'kube-cred', serverUrl: 'https://BCF949B28BDCE2D73533306C496AB5BA.yl4.us-east-2.eks.amazonaws.com
+']) {
                   sh 'kubectl get nodes'
                 } 
              }
