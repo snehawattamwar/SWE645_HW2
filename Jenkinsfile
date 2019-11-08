@@ -29,15 +29,5 @@ pipeline {
               } 
            }
         }
-        
-        stage('Pods') {
-            steps {
-                script {
-                  withKubeConfig([credentialsId: 'kube-cred']) {
-                  sh 'kubectl set image deployments/surveyapp surveyapp=swattamw/studentsurveyform:latest'
-                  } 
-                }
-             }
-        }
     }
 }
