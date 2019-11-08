@@ -30,7 +30,7 @@ pipeline {
            }
         }
         
-        stage('Push image') {
+        stage('Pods') {
             steps {
                 script {
                   withKubeConfig([credentialsId: 'kube-cred', serverUrl: 'http://afd74701301a111eaadd70643358b614-1438923002.us-east-2.elb.amazonaws.com']) {
