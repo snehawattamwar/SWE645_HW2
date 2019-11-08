@@ -34,7 +34,6 @@ pipeline {
             steps {
                 sh 'kubectl set image deployments/surveyapp surveyapp=swattamw/studentsurveyform:latest'
                 } 
-            }
         }
     }
 }
